@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills | Bugude Ganesh</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/animations.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="noise-overlay"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+  <div class="loader" id="loader">
+    <div class="loader-logo">BG</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo" onclick="window.location='../index.html'">
+      <span class="logo-text">BG</span><div class="logo-dot"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="skills.html" class="nav-link active">Skills</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="contact.html" class="btn-hire">Hire Me</a></div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <section class="page-hero">
+    <div class="hero-bg-grid"></div>
+    <div class="floating-shapes"><div class="shape shape-1"></div><div class="shape shape-3"></div></div>
+    <span class="section-tag page-hero-tag reveal-up">Expertise</span>
+    <h1 class="reveal-up delay-1">Technical <span style="color:var(--teal)">Skills</span></h1>
+    <p class="reveal-up delay-2">A showcase of my technical toolkit — built through study, practice, and passion.</p>
+    <div class="page-divider reveal-up delay-3"></div>
+  </section>
+
+  <section class="skills-section">
+    <div class="container">
+
+      <!-- Proficiency Bars -->
+      <div class="section-header reveal-up">
+        <span class="section-tag">Core Proficiency</span>
+        <h2 class="section-title">Skills Overview</h2>
+      </div>
+      <div class="skills-bars reveal-up delay-1">
+        <div class="skill-row">
+          <label>Python Programming <span>75%</span></label>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="75" style="background:linear-gradient(to right,#14b8a6,#5eead4)"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <label>SQL & RDBMS <span>70%</span></label>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="70" style="background:linear-gradient(to right,#f59e0b,#fcd34d)"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <label>HTML5 <span>72%</span></label>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="72" style="background:linear-gradient(to right,#ef4444,#f87171)"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <label>CSS3 & Responsive Design <span>65%</span></label>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="65" style="background:linear-gradient(to right,#3b82f6,#93c5fd)"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <label>Manual Testing <span>60%</span></label>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="60" style="background:linear-gradient(to right,#8b5cf6,#c4b5fd)"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <label>Problem Solving & Algorithms <span>70%</span></label>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="70" style="background:linear-gradient(to right,#14b8a6,#5eead4)"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Categories -->
+      <div class="skills-categories" style="margin-top:5rem;">
+
+        <!-- Python -->
+        <div class="reveal-up">
+          <div class="skills-cat-title"><i class="fab fa-python" style="color:var(--teal)"></i> Python</div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Core Concepts & Syntax</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Variables & Data Types</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Loops & Conditionals</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Functions</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> String Operations</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Lists & Dictionaries</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Algorithm Implementation</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Problem Solving</span>
+          </div>
+        </div>
+
+        <!-- SQL -->
+        <div class="reveal-up delay-1">
+          <div class="skills-cat-title"><i class="fas fa-database" style="color:var(--gold)"></i> SQL & Database</div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> CRUD Operations</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> DDL (CREATE, ALTER, DROP)</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> DML (INSERT, UPDATE, DELETE)</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> DCL (GRANT, REVOKE)</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> TCL (COMMIT, ROLLBACK)</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> DQL (SELECT)</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Joins & Sub-queries</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Data Grouping & Aggregation</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> RDBMS Concepts</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Database Design</span>
+          </div>
+        </div>
+
+        <!-- Web -->
+        <div class="reveal-up delay-2">
+          <div class="skills-cat-title"><i class="fab fa-html5" style="color:#ef4444"></i> Web Technologies</div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> HTML5 Semantic Markup</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> CSS3 Styling</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Responsive Design</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Flexbox & Grid</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> CSS Animations</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Web Accessibility</span>
+          </div>
+        </div>
+
+        <!-- Testing -->
+        <div class="reveal-up delay-3">
+          <div class="skills-cat-title"><i class="fas fa-vial" style="color:#8b5cf6"></i> Software Testing</div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Manual Testing</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Test Case Design</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Bug Identification</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Quality Assurance</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> SDLC Fundamentals</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Testing Life Cycle</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="reveal-up delay-4">
+          <div class="skills-cat-title"><i class="fas fa-brain" style="color:var(--teal)"></i> Soft Skills</div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Analytical Thinking</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Team Collaboration</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Communication</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Continuous Learning</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Problem Solving</span>
+            <span class="skill-tag"><i class="fas fa-circle-dot"></i> Attention to Detail</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Competency Grid -->
+      <div style="margin-top:5rem;">
+        <div class="section-header reveal-up">
+          <span class="section-tag">At a Glance</span>
+          <h2 class="section-title">Core Competencies</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal-up delay-1">
+            <div class="skill-icon-wrap python"><i class="fas fa-code"></i></div>
+            <h3>Programming</h3>
+            <p>Python development, algorithm design, and efficient problem-solving approaches.</p>
+          </div>
+          <div class="skill-card reveal-up delay-2">
+            <div class="skill-icon-wrap sql"><i class="fas fa-table"></i></div>
+            <h3>Database Management</h3>
+            <p>SQL query optimization, database design, normalization, and data analysis.</p>
+          </div>
+          <div class="skill-card reveal-up delay-3">
+            <div class="skill-icon-wrap web"><i class="fas fa-paint-brush"></i></div>
+            <h3>Web Development</h3>
+            <p>Responsive frontend design, semantic HTML, modern CSS techniques.</p>
+          </div>
+          <div class="skill-card reveal-up delay-4">
+            <div class="skill-icon-wrap test"><i class="fas fa-shield-alt"></i></div>
+            <h3>Quality Assurance</h3>
+            <p>Systematic test planning, defect tracking, and software quality fundamentals.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">BG<span class="dot-teal">.</span></div>
+      <p class="footer-tagline">Crafting code, one line at a time.</p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">© 2024 Bugude Ganesh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

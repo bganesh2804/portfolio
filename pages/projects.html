@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Bugude Ganesh</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/animations.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .filter-bar {
+      display: flex; gap: 0.8rem; flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: 0.45rem 1.2rem;
+      border: 1px solid var(--border);
+      background: var(--bg-card); color: var(--text-secondary);
+      border-radius: 50px; font-size: 0.85rem; font-weight: 500;
+      cursor: pointer; transition: var(--transition);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--teal); color: #fff;
+      border-color: var(--teal);
+    }
+    .coming-soon-card {
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 3rem 2rem;
+      text-align: center;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 1rem; min-height: 220px;
+    }
+    .coming-soon-card i { font-size: 2rem; color: var(--text-muted); }
+    .coming-soon-card p { color: var(--text-muted); font-size: 0.88rem; }
+    .coming-soon-card h3 { font-size: 1rem; color: var(--text-secondary); }
+  </style>
+</head>
+<body>
+  <div class="noise-overlay"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+  <div class="loader" id="loader">
+    <div class="loader-logo">BG</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo" onclick="window.location='../index.html'">
+      <span class="logo-text">BG</span><div class="logo-dot"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="skills.html" class="nav-link">Skills</a></li>
+      <li><a href="projects.html" class="nav-link active">Projects</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="contact.html" class="btn-hire">Hire Me</a></div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <section class="page-hero">
+    <div class="hero-bg-grid"></div>
+    <div class="floating-shapes"><div class="shape shape-2"></div><div class="shape shape-4"></div></div>
+    <span class="section-tag page-hero-tag reveal-up">My Work</span>
+    <h1 class="reveal-up delay-1">Featured <span style="color:var(--teal)">Projects</span></h1>
+    <p class="reveal-up delay-2">Real-world applications built with Python, SQL, HTML & CSS.</p>
+    <div class="page-divider reveal-up delay-3"></div>
+  </section>
+
+  <section class="projects-section">
+    <div class="container">
+
+      <!-- Filter -->
+      <div class="filter-bar reveal-up">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+        <button class="filter-btn" onclick="filterProjects('python', this)">Python</button>
+        <button class="filter-btn" onclick="filterProjects('sql', this)">SQL</button>
+        <button class="filter-btn" onclick="filterProjects('web', this)">Web</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1 -->
+        <div class="project-card card-shine reveal-up delay-1" data-cat="python sql">
+          <div class="project-header">
+            <div class="project-icon-wrap" style="background:rgba(20,184,166,0.15);">
+              <i class="fab fa-python" style="color:var(--teal)"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>Student Database Management System</h3>
+            <p>A Python + SQL application for managing student records, grades, and academic data. Features CRUD operations, search, filtering, and detailed reporting using RDBMS concepts.</p>
+            <div class="project-tech">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">SQL</span>
+              <span class="tech-pill">RDBMS</span>
+              <span class="tech-pill">CRUD</span>
+            </div>
+          </div>
+          <span class="project-status status-wip">In Progress</span>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card card-shine reveal-up delay-2" data-cat="web python">
+          <div class="project-header">
+            <div class="project-icon-wrap" style="background:rgba(239,68,68,0.15);">
+              <i class="fab fa-html5" style="color:#ef4444"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>Personal Portfolio Website</h3>
+            <p>A fully responsive portfolio website built with HTML5, CSS3, and JavaScript. Features smooth animations, custom cursor, particle effects, and a clean dark aesthetic.</p>
+            <div class="project-tech">
+              <span class="tech-pill">HTML5</span>
+              <span class="tech-pill">CSS3</span>
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">Responsive</span>
+            </div>
+          </div>
+          <span class="project-status status-done">Completed</span>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card card-shine reveal-up delay-3" data-cat="python">
+          <div class="project-header">
+            <div class="project-icon-wrap" style="background:rgba(245,158,11,0.15);">
+              <i class="fas fa-calculator" style="color:var(--gold)"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>Python Calculator & Algorithm Toolkit</h3>
+            <p>A collection of Python scripts implementing various algorithms — sorting, searching, mathematical computations, and string manipulation utilities with clean CLI interface.</p>
+            <div class="project-tech">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Algorithms</span>
+              <span class="tech-pill">CLI</span>
+            </div>
+          </div>
+          <span class="project-status status-done">Completed</span>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card card-shine reveal-up delay-4" data-cat="sql">
+          <div class="project-header">
+            <div class="project-icon-wrap" style="background:rgba(139,92,246,0.15);">
+              <i class="fas fa-database" style="color:#8b5cf6"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>SQL Query Practice Repository</h3>
+            <p>A curated collection of SQL queries covering DDL, DML, DCL, TCL, complex joins, sub-queries, stored procedures, and data grouping with real-world scenarios.</p>
+            <div class="project-tech">
+              <span class="tech-pill">SQL</span>
+              <span class="tech-pill">MySQL</span>
+              <span class="tech-pill">Joins</span>
+              <span class="tech-pill">Sub-queries</span>
+            </div>
+          </div>
+          <span class="project-status status-done">Completed</span>
+        </div>
+
+        <!-- Coming Soon Cards -->
+        <div class="coming-soon-card reveal-up delay-5" data-cat="all">
+          <i class="fas fa-plus-circle"></i>
+          <h3>More Projects Coming Soon</h3>
+          <p>Currently building new projects. Stay tuned!</p>
+        </div>
+
+        <div class="coming-soon-card reveal-up delay-5" data-cat="all">
+          <i class="fas fa-rocket"></i>
+          <h3>Open to Collaboration</h3>
+          <p>Interested in working together? Let's connect!</p>
+          <a href="contact.html" class="btn-outline" style="margin-top:0.5rem">Get in Touch <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="cta-content reveal-up">
+      <h2>Have a project in mind?</h2>
+      <p>I'm always excited to work on new challenges and contribute to meaningful projects.</p>
+      <a href="contact.html" class="btn-primary"><span>Start a Conversation</span><i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="cta-blob"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">BG<span class="dot-teal">.</span></div>
+      <p class="footer-tagline">Crafting code, one line at a time.</p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">© 2024 Bugude Ganesh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+  <script>
+    function filterProjects(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('#projectsGrid > *').forEach(card => {
+        const cardCat = card.getAttribute('data-cat') || 'all';
+        if (cat === 'all' || cardCat.includes(cat)) {
+          card.style.display = '';
+          card.style.animation = 'fadeInUp 0.4s ease both';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

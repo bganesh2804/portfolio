@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bugude Ganesh | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">BG</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-text">BG</span>
+      <div class="logo-dot"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="pages/about.html" class="nav-link">About</a></li>
+      <li><a href="pages/skills.html" class="nav-link">Skills</a></li>
+      <li><a href="pages/projects.html" class="nav-link">Projects</a></li>
+      <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="pages/contact.html" class="btn-hire">Hire Me</a>
+    </div>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pages/about.html">About</a></li>
+      <li><a href="pages/skills.html">Skills</a></li>
+      <li><a href="pages/projects.html">Projects</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag reveal-up">
+        <span class="tag-dot"></span>
+        Available for Work
+      </div>
+      <h1 class="hero-title reveal-up delay-1">
+        <span class="title-line">Bugude</span>
+        <span class="title-line accent">Ganesh</span>
+      </h1>
+      <div class="hero-roles reveal-up delay-2">
+        <span class="role-static">I'm a </span>
+        <span class="role-dynamic" id="roleTyper"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-desc reveal-up delay-3">
+        Recent B.Sc (MSCs) graduate passionate about Python, SQL, and software development.
+        Building clean code and elegant solutions from Bengaluru, India.
+      </p>
+      <div class="hero-actions reveal-up delay-4">
+        <a href="pages/projects.html" class="btn-primary">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#" class="btn-secondary" onclick="downloadResume()">
+          <i class="fas fa-download"></i>
+          <span>Resume</span>
+        </a>
+      </div>
+      <div class="hero-stats reveal-up delay-5">
+        <div class="stat">
+          <span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Years Learning</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Tech Skills</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="2">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal-right delay-2">
+      <div class="avatar-container">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <div class="avatar-box">
+          <div class="avatar-initials">BG</div>
+          <div class="avatar-glow"></div>
+        </div>
+        <!-- Floating tech badges -->
+        <div class="tech-badge badge-python">
+          <i class="fab fa-python"></i> Python
+        </div>
+        <div class="tech-badge badge-sql">
+          <i class="fas fa-database"></i> SQL
+        </div>
+        <div class="tech-badge badge-html">
+          <i class="fab fa-html5"></i> HTML/CSS
+        </div>
+        <div class="tech-badge badge-test">
+          <i class="fas fa-bug"></i> Testing
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Quick About Strip -->
+  <section class="quick-about">
+    <div class="qa-inner">
+      <div class="qa-item reveal-up">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Bengaluru, Karnataka</span>
+      </div>
+      <div class="qa-sep">—</div>
+      <div class="qa-item reveal-up delay-1">
+        <i class="fas fa-graduation-cap"></i>
+        <span>B.Sc MSCs, 2024</span>
+      </div>
+      <div class="qa-sep">—</div>
+      <div class="qa-item reveal-up delay-2">
+        <i class="fas fa-code"></i>
+        <span>Python & SQL Developer</span>
+      </div>
+      <div class="qa-sep">—</div>
+      <div class="qa-item reveal-up delay-3">
+        <i class="fas fa-vial"></i>
+        <span>Manual Testing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Preview -->
+  <section class="skills-preview section-pad">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Core Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal-up delay-1" onclick="window.location='pages/skills.html'">
+          <div class="skill-icon-wrap python">
+            <i class="fab fa-python"></i>
+          </div>
+          <h3>Python</h3>
+          <p>Core concepts, data types, loops, functions, string operations & algorithms</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="75"></div>
+          </div>
+          <span class="skill-pct">75%</span>
+        </div>
+        <div class="skill-card reveal-up delay-2" onclick="window.location='pages/skills.html'">
+          <div class="skill-icon-wrap sql">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>SQL / RDBMS</h3>
+          <p>CRUD, DDL, DML, DCL, TCL, joins, sub-queries, data grouping</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="70"></div>
+          </div>
+          <span class="skill-pct">70%</span>
+        </div>
+        <div class="skill-card reveal-up delay-3" onclick="window.location='pages/skills.html'">
+          <div class="skill-icon-wrap web">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h3>HTML & CSS</h3>
+          <p>Semantic HTML, modern CSS, responsive design & layouts</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="65"></div>
+          </div>
+          <span class="skill-pct">65%</span>
+        </div>
+        <div class="skill-card reveal-up delay-4" onclick="window.location='pages/skills.html'">
+          <div class="skill-icon-wrap test">
+            <i class="fas fa-vial"></i>
+          </div>
+          <h3>Manual Testing</h3>
+          <p>Test case design, bug identification & quality assurance fundamentals</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="60"></div>
+          </div>
+          <span class="skill-pct">60%</span>
+        </div>
+      </div>
+      <div class="section-cta reveal-up">
+        <a href="pages/skills.html" class="btn-outline">View All Skills <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="cta-content reveal-up">
+      <h2>Ready to build something great?</h2>
+      <p>I'm open to entry-level opportunities in software development, testing & data.</p>
+      <a href="pages/contact.html" class="btn-primary">
+        <span>Let's Talk</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+    <div class="cta-blob"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">BG<span class="dot-teal">.</span></div>
+      <p class="footer-tagline">Crafting code, one line at a time.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/skills.html">Skills</a>
+        <a href="pages/projects.html">Projects</a>
+        <a href="pages/contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">© 2024 Bugude Ganesh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

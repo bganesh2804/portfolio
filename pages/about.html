@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Bugude Ganesh</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/animations.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="noise-overlay"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">BG</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo" onclick="window.location='../index.html'">
+      <span class="logo-text">BG</span><div class="logo-dot"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link active">About</a></li>
+      <li><a href="skills.html" class="nav-link">Skills</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="contact.html" class="btn-hire">Hire Me</a></div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="hero-bg-grid"></div>
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <span class="section-tag page-hero-tag reveal-up">About Me</span>
+    <h1 class="reveal-up delay-1">Who I <span style="color:var(--teal)">Am</span></h1>
+    <p class="reveal-up delay-2">A passionate developer with a love for clean code and continuous learning.</p>
+    <div class="page-divider reveal-up delay-3"></div>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <h2>Hello, I'm Ganesh 👋</h2>
+          <p>I'm a recent B.Sc (Mathematics, Statistics & Computer Science) graduate from <strong>Vynshavi Degree College, Rayalaseema University</strong>, passionate about building software solutions that make a real impact.</p>
+          <p>My journey in technology started with a strong foundation in Mathematics, which gave me the analytical mindset needed to tackle complex programming challenges. I've developed hands-on skills in Python, SQL, and web technologies through dedicated self-study and academic coursework.</p>
+          <div class="about-highlight">
+            "Every expert was once a beginner. I believe in learning every day, building with purpose, and growing without limits."
+          </div>
+          <p>Currently based in Bengaluru, Karnataka — the tech hub of India — I'm actively seeking entry-level opportunities in software development, database management, and software testing where I can contribute meaningfully while growing as a professional.</p>
+          <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;">
+            <a href="contact.html" class="btn-primary"><span>Contact Me</span><i class="fas fa-arrow-right"></i></a>
+            <a href="skills.html" class="btn-secondary"><i class="fas fa-code"></i><span>My Skills</span></a>
+          </div>
+        </div>
+        <div class="about-details reveal-right">
+          <div class="detail-card">
+            <div class="detail-icon"><i class="fas fa-user"></i></div>
+            <div class="detail-info">
+              <label>Full Name</label>
+              <p>Bugude Ganesh</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+            <div class="detail-info">
+              <label>Email</label>
+              <p>bugudeganesh00@gmail.com</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon"><i class="fas fa-phone"></i></div>
+            <div class="detail-info">
+              <label>Phone</label>
+              <p>+91 9948226418</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="detail-info">
+              <label>Location</label>
+              <p>Bengaluru, Karnataka, India</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="detail-info">
+              <label>Degree</label>
+              <p>B.Sc MSCs (Math, Stats & CS)</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon"><i class="fas fa-language"></i></div>
+            <div class="detail-info">
+              <label>Languages</label>
+              <p>English · Telugu · Kannada</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon"><i class="fas fa-heart"></i></div>
+            <div class="detail-info">
+              <label>Interests</label>
+              <p>Software Dev · Data Analysis · Testing</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+            <div class="detail-info">
+              <label>Status</label>
+              <p style="color:var(--teal);font-weight:700;">Open to Work ✓</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Timeline -->
+  <section class="education-section" style="background:var(--bg-secondary);padding-top:4rem;">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Academic Journey</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal-up delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2021 – 2024</span>
+            <h3>Bachelor of Science in Mathematics, Statistics & Computer Science</h3>
+            <p>Vynshavi Degree College | Rayalaseema University</p>
+            <span class="timeline-badge"><i class="fas fa-medal"></i> Score: 69%</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal-up delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2018 – 2020</span>
+            <h3>Intermediate — MPC (Mathematics, Physics, Chemistry)</h3>
+            <p>Deeksha Junior College | Board of Intermediate Education, AP</p>
+            <span class="timeline-badge"><i class="fas fa-medal"></i> Score: 69.35%</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal-up delay-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2018</span>
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p>Good Shepherd English Medium High School | Board of Secondary Education, AP</p>
+            <span class="timeline-badge"><i class="fas fa-star"></i> CGPA: 9.0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interests -->
+  <section class="section-pad" style="background:var(--bg-primary);">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What Drives Me</span>
+        <h2 class="section-title">Areas of Interest</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal-up delay-1">
+          <div class="skill-icon-wrap python"><i class="fas fa-laptop-code"></i></div>
+          <h3>Software Development</h3>
+          <p>Passionate about writing clean, efficient code and building applications that solve real-world problems.</p>
+        </div>
+        <div class="skill-card reveal-up delay-2">
+          <div class="skill-icon-wrap sql"><i class="fas fa-database"></i></div>
+          <h3>Database Management</h3>
+          <p>Fascinated by data organization, query optimization, and the power of structured information.</p>
+        </div>
+        <div class="skill-card reveal-up delay-3">
+          <div class="skill-icon-wrap web"><i class="fas fa-globe"></i></div>
+          <h3>Web Development</h3>
+          <p>Enjoy creating responsive, accessible, and visually appealing web experiences.</p>
+        </div>
+        <div class="skill-card reveal-up delay-4">
+          <div class="skill-icon-wrap test"><i class="fas fa-chart-bar"></i></div>
+          <h3>Data Analysis</h3>
+          <p>Leveraging my Math & Statistics background to uncover insights hidden within data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">BG<span class="dot-teal">.</span></div>
+      <p class="footer-tagline">Crafting code, one line at a time.</p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">© 2024 Bugude Ganesh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>
