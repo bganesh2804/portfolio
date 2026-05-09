@@ -210,8 +210,8 @@ if (form) {
 }
 
 // ================================
-// DOWNLOAD RESUME
+// VIEW RESUME IN NEW TAB
 // ================================
-function downloadResume() {
-  alert('Resume download would be linked to your actual PDF file. Add the PDF to the portfolio folder and update this link!');
+function viewResume() {
+  window.open('resume.pdf', '_blank');
 }
